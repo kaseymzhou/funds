@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en" class="loading">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="description" content="Convex admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
+    <meta name="keywords" content="admin template, Convex admin template, dashboard template, flat admin template, responsive admin template, web app">
+    <meta name="author" content="PIXINVENT">
+    <title>FFunds 基金类别</title>
+    <link rel="apple-touch-icon" sizes="60x60" href="app-assets/img/ico/apple-icon-60.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="app-assets/img/ico/apple-icon-76.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="app-assets/img/ico/apple-icon-120.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="app-assets/img/ico/apple-icon-152.png">
+    <link rel="shortcut icon" type="image/x-icon" href="app-assets/img/ico/favicon.ico">
+    <link rel="shortcut icon" type="image/png" href="app-assets/img/ico/favicon-32.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900%7CMontserrat:300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="app-assets/fonts/feather/style.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/fonts/simple-line-icons/style.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/fonts/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/perfect-scrollbar.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/prism.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/tables/datatable/datatables.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/app.css">
+  </head>
+  <body data-col="2-columns" class=" 2-columns ">
+    <!-- ////////////////////////////////////////////////////////////////////////////-->
+    <div class="wrapper">
+
+    <!-- 竖bar -->
+    <div data-active-color="white" data-background-color="black" data-image="app-assets/img/sidebar-bg/01.jpg" class="app-sidebar">
+      <div class="sidebar-header">
+        <!-- 图标、标题 -->
+        <div class="logo clearfix">
+          <a href="funds-index.html" class="logo-text float-left">
+            <div class="logo-img"><img src="app-assets/img/logo.png" alt="Convex Logo"/></div>
+            <span class="text align-middle">FunFunds</span>
+          </a>
+          <!-- 放大与缩小 -->
+          <a id="sidebarToggle" href="javascript:;" class="nav-toggle d-none d-sm-none d-md-none d-lg-block">
+            <i data-toggle="expanded" class="ft-disc toggle-icon"></i>
+          </a>
+          <a id="sidebarClose" href="javascript:;" class="nav-close d-block d-md-block d-lg-none d-xl-none">
+            <i class="ft-circle"></i>
+          </a>
+        </div>
+      </div>
+      <!-- 导航栏 -->
+      <div class="sidebar-content">
+        <div class="nav-container">
+          <ul id="main-menu-navigation" data-menu="menu-navigation" class="navigation navigation-main">
+            <li class="has-sub nav-item">
+              <a href="#">
+                <i class="icon-home"></i>
+                <span data-i18n="" class="menu-title">按投资类别</span>
+              </a>
+              <ul class="menu-content">
+                <li><a href="funds-catalog.html?cid=1" class="menu-item">债券型</a>
+                </li>
+                <li><a href="funds-catalog.html?cid=2" class="menu-item">债券指数</a>
+                </li>
+                <li><a href="funds-catalog.html?cid=3" class="menu-item">股票型</a>
+                </li>
+                <li><a href="funds-catalog.html?cid=4" class="menu-item">QDII</a>
+                </li>
+                <li><a href="funds-catalog.html?cid=5" class="menu-item">混合FOF</a>
+                </li>
+                <li><a href="funds-catalog.html?cid=6" class="menu-item">混合型</a>
+                </li>
+              </ul>
+            </li>
+            <li class="has-sub nav-item">
+              <a href="#">
+                <i class="icon-screen-desktop"></i>
+                <span data-i18n="" class="menu-title">按风险程度</span>
+              </a>
+              <ul class="menu-content">
+                <li><a href="funds-catalog.html?cid=7" class="menu-item">高风险</a>
+                </li>
+                <li><a href="funds-catalog.html?cid=8" class="menu-item">中高风险</a>
+                </li>
+                <li><a href="funds-catalog.html?cid=9" class="menu-item">中风险</a>
+                </li>
+                <li><a href="funds-catalog.html?cid=10" class="menu-item">中低风险</a>
+                </li>
+                <li><a href="funds-catalog.html?cid=11" class="menu-item">低风险</a>
+                </li>
+              </ul>
+            </li>
+            <li class="has-sub nav-item">
+              <a href="#">
+                <i class="icon-magnet"></i>
+                <span data-i18n="" class="menu-title">按基金管理人</span>
+              </a>
+              <ul class="menu-content">
+                <li><a href="funds-catalog.html?cid=12" class="menu-item">博时基金</a>
+                </li>
+                <li><a href="funds-catalog.html?cid=13" class="menu-item">广发基金</a>
+                </li>
+                <li><a href="funds-catalog.html?cid=14" class="menu-item">中信保诚基金</a>
+                </li>
+                <li><a href="funds-catalog.html?cid=15" class="menu-item">南方基金</a>
+                </li>
+                <li><a href="funds-catalog.html?cid=16" class="menu-item">华夏基金</a>
+                </li>
+                <li><a href="funds-catalog.html?cid=17" class="menu-item">工银瑞信基金</a>
+                </li>
+                <li><a href="funds-catalog.html?cid=18" class="menu-item">招商基金</a>
+                </li>
+                <li><a href="funds-catalog.html?cid=19" class="menu-item">万家基金</a>
+                </li>
+                <li><a href="funds-catalog.html?cid=20" class="menu-item">嘉实基金</a>
+                </li>
+                <li><a href="funds-catalog.html?cid=21" class="menu-item">易方达基金</a>
+                </li>
+              </ul>
+            </li>
+            <li class=" nav-item">
+              <a href="funds-comments.html">
+                <i class="icon-layers"></i>
+                <span data-i18n="" class="menu-title">意见与反馈</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="sidebar-background"></div>
+    </div>
+
+    <!-- 横bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-faded">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" data-toggle="collapse" class="navbar-toggle d-lg-none float-left">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span></button>
+            <span class="d-lg-none navbar-right navbar-collapse-toggle">
+              <a class="open-navbar-container">
+                <i class="ft-more-vertical"></i></a></span>
+                <a id="navbar-fullscreen" href="javascript:;" class="mr-2 display-inline-block apptogglefullscreen">
+            <p class="d-none">fullscreen</p></a><a class="ml-2 display-inline-block">
+            <p class="d-none">cart</p></a>
+        </div>
+        <div class="navbar-container">
+          <div id="navbarSupportedContent" class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+              <!-- 搜索栏 -->
+              <li class="nav-item mt-1 navbar-search text-left dropdown">
+                <a id="search" href="" data-toggle="dropdown" class="nav-link dropdown-toggle">
+                  <i class="ft-search blue-grey darken-4"></i>
+                </a>
+                <div aria-labelledby="search" class="search dropdown-menu dropdown-menu-right">
+                  <div class="arrow_box_right">
+                    <form role="search" class="navbar-form navbar-right">
+                      <div class="position-relative has-icon-right mb-0">
+                        <input id="navbar-search" type="text" placeholder="输入基金编号、名字等" class="form-control"/>
+                        <div class="form-control-position navbar-search-close"><i class="ft-x"></i></div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </li>
+              <!-- 头像 -->
+              <li class="dropdown nav-item mr-0">
+                <a id="dropdownBasic3" href="userindex.html" data-toggle="dropdown" class="nav-link position-relative dropdown-user-link dropdown-toggle">
+                  <span class="avatar avatar-online">
+                    <img id="navbar-avatar" src="app-assets/img/portrait/small/avatar.jpg" alt="avatar"/>
+                  </span>
+                </a>
+                <div aria-labelledby="dropdownBasic3" class="dropdown-menu dropdown-menu-right">
+                  <div class="arrow_box_right">
+                    <a href="userindex.html" class="dropdown-item py-1">
+                      <i class="ft-edit mr-2"></i><span>My Profile</span>
+                    </a>
+                    <a href="javascript:;" class="dropdown-item py-1">
+                      <i class="ft-settings mr-2"></i>
+                      <span>Settings</span>
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a href="javascript:;" class="dropdown-item">
+                      <i class="ft-power mr-2"></i>
+                      <span>Logout</span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+      <div class="main-panel">
+        <div class="main-content">
+          <div class="content-wrapper">
+            <div class="container-fluid"><!-- DOM - jQuery events table -->
+<section id="dom">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title-wrap bar-success">
+                        <h4 class="card-title">FFunds / XX类型</h4>
+                    </div>
+                </div>
+                <div class="card-body collapse show">
+                    <div class="card-block card-dashboard">
+                        <p class="card-text">该类别下共查询到？条信息</p>
+                        <table class="table table-striped table-bordered dom-jQuery-events">
+                            <thead>
+                                <tr>
+                                    <th>基金名字</th>
+                                    <th>基金编号</th>
+                                    <th>单位净值</th>
+                                    <th>累计净值</th>
+                                    <th>所属基金管理人</th>
+                                    <th>风险类别</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><a href="funds-details.html?fid=0">Tiger Nixon</a></td>
+                                    <td>System Architect</td>
+                                    <td>Edinburgh</td>
+                                    <td>61</td>
+                                    <td>2011/04/25</td>
+                                    <td>$320,800</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>基金名字</th>
+                                    <th>基金编号</th>
+                                    <th>单位净值</th>
+                                    <th>累计净值</th>
+                                    <th>所属基金管理人</th>
+                                    <th>风险类别</th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- File export table -->
+
+            </div>
+          </div>
+        </div>
+
+        <footer class="footer footer-static footer-light">
+            <p class="clearfix text-muted text-center px-2">
+              <span>Copyright  &copy; 2020 
+                <a href="#" id="pixinventLink" target="_blank" class="text-bold-800 primary darken-2">KASEYMZHOU  
+                </a>, All rights reserved. 
+              </span>
+            </p>
+        </footer>
+
+      </div>
+    </div>
+    <!-- ////////////////////////////////////////////////////////////////////////////-->
+
+    <!-- BEGIN VENDOR JS-->
+    <script src="app-assets/vendors/js/core/jquery-3.3.1.min.js"></script>
+    <script src="app-assets/vendors/js/core/popper.min.js"></script>
+    <script src="app-assets/vendors/js/core/bootstrap.min.js"></script>
+    <script src="app-assets/vendors/js/perfect-scrollbar.jquery.min.js"></script>
+    <script src="app-assets/vendors/js/prism.min.js"></script>
+    <script src="app-assets/vendors/js/jquery.matchHeight-min.js"></script>
+    <script src="app-assets/vendors/js/screenfull.min.js"></script>
+    <script src="app-assets/vendors/js/pace/pace.min.js"></script>
+    <!-- BEGIN VENDOR JS-->
+    <!-- BEGIN PAGE VENDOR JS-->
+    <script src="app-assets/vendors/js/datatable/datatables.min.js"></script>
+    <script src="app-assets/vendors/js/datatable/dataTables.buttons.min.js"></script>
+    <script src="app-assets/vendors/js/datatable/buttons.flash.min.js"></script>
+    <script src="app-assets/vendors/js/datatable/jszip.min.js"></script>
+    <script src="app-assets/vendors/js/datatable/pdfmake.min.js"></script>
+    <script src="app-assets/vendors/js/datatable/vfs_fonts.js"></script>
+    <script src="app-assets/vendors/js/datatable/buttons.html5.min.js"></script>
+    <script src="app-assets/vendors/js/datatable/buttons.print.min.js"></script>
+    <!-- END PAGE VENDOR JS-->
+    <!-- BEGIN CONVEX JS-->
+    <script src="app-assets/js/app-sidebar.js"></script>
+    <script src="app-assets/js/notification-sidebar.js"></script>
+    <!-- END CONVEX JS-->
+    <!-- BEGIN PAGE LEVEL JS-->
+    <script src="app-assets/js/data-tables/datatable-advanced.js"></script>
+    <!-- END PAGE LEVEL JS-->
+  </body>
+</html>

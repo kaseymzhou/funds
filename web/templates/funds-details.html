@@ -7,13 +7,13 @@
     <meta name="description" content="Convex admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
     <meta name="keywords" content="admin template, Convex admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="PIXINVENT">
-    <title>eCommerce Dashboard - Convex bootstrap 4 admin dashboard template</title>
+    <title>FFunds 详细基金信息</title>
     <link rel="apple-touch-icon" sizes="60x60" href="app-assets/img/ico/apple-icon-60.png">
     <link rel="apple-touch-icon" sizes="76x76" href="app-assets/img/ico/apple-icon-76.png">
     <link rel="apple-touch-icon" sizes="120x120" href="app-assets/img/ico/apple-icon-120.png">
     <link rel="apple-touch-icon" sizes="152x152" href="app-assets/img/ico/apple-icon-152.png">
-    <link rel="shortcut icon" type="image/x-icon" href="app-assets/img/ico/favicon.ico">
-    <link rel="shortcut icon" type="image/png" href="app-assets/img/ico/favicon-32.png">
+    <link rel="shortcut icon" href="app-assets/img/ico/favicon.jpg>
+    <!-- <link rel="shortcut icon" href="app-assets/img/ico/favicon-32.jpg"> -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-touch-fullscreen" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
@@ -25,229 +25,105 @@
     <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/prism.min.css">
     <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/chartist.min.css">
     <link rel="stylesheet" type="text/css" href="app-assets/css/app.css">
+    <script src="app-assets/js/echarts.js"></script>
   </head>
   <body data-col="2-columns" class=" 2-columns ">
     <!-- ////////////////////////////////////////////////////////////////////////////-->
     <div class="wrapper">
 
-
+      <!-- 竖bar -->
       <div data-active-color="white" data-background-color="black" data-image="app-assets/img/sidebar-bg/01.jpg" class="app-sidebar">
         <div class="sidebar-header">
-          <div class="logo clearfix"><a href="index.html" class="logo-text float-left">
-              <div class="logo-img"><img src="app-assets/img/logo.png" alt="Convex Logo"/></div><span class="text align-middle">CONVEX</span></a><a id="sidebarToggle" href="javascript:;" class="nav-toggle d-none d-sm-none d-md-none d-lg-block"><i data-toggle="expanded" class="ft-disc toggle-icon"></i></a><a id="sidebarClose" href="javascript:;" class="nav-close d-block d-md-block d-lg-none d-xl-none"><i class="ft-circle"></i></a></div>
+          <!-- 图标、标题 -->
+          <div class="logo clearfix">
+            <a href="funds-index.html" class="logo-text float-left">
+              <div class="logo-img"><img src="app-assets/img/logo.png" alt="Convex Logo"/></div>
+              <span class="text align-middle">FunFunds</span>
+            </a>
+            <!-- 放大与缩小 -->
+            <a id="sidebarToggle" href="javascript:;" class="nav-toggle d-none d-sm-none d-md-none d-lg-block">
+              <i data-toggle="expanded" class="ft-disc toggle-icon"></i>
+            </a>
+            <a id="sidebarClose" href="javascript:;" class="nav-close d-block d-md-block d-lg-none d-xl-none">
+              <i class="ft-circle"></i>
+            </a>
+          </div>
         </div>
+        <!-- 导航栏 -->
         <div class="sidebar-content">
           <div class="nav-container">
             <ul id="main-menu-navigation" data-menu="menu-navigation" class="navigation navigation-main">
-              <li class="has-sub nav-item"><a href="#"><i class="icon-home"></i><span data-i18n="" class="menu-title">Dashboard</span><span class="tag badge badge-pill badge-danger mt-1">2</span></a>
+              <li class="has-sub nav-item">
+                <a href="#">
+                  <i class="icon-home"></i>
+                  <span data-i18n="" class="menu-title">按投资类别</span>
+                </a>
                 <ul class="menu-content">
-                  <li class="active"><a href="dashboard-ecommerce.html" class="menu-item">eCommerce</a>
+                  <li><a href="funds-catalog.html?cid=1" class="menu-item">债券型</a>
                   </li>
-                  <li><a href="dashboard-analytics.html" class="menu-item">Analytics</a>
+                  <li><a href="funds-catalog.html?cid=2" class="menu-item">债券指数</a>
+                  </li>
+                  <li><a href="funds-catalog.html?cid=3" class="menu-item">股票型</a>
+                  </li>
+                  <li><a href="funds-catalog.html?cid=4" class="menu-item">QDII</a>
+                  </li>
+                  <li><a href="funds-catalog.html?cid=5" class="menu-item">混合FOF</a>
+                  </li>
+                  <li><a href="funds-catalog.html?cid=6" class="menu-item">混合型</a>
                   </li>
                 </ul>
               </li>
-              <li class="has-sub nav-item"><a href="#"><i class="icon-screen-desktop"></i><span data-i18n="" class="menu-title">Apps</span></a>
+              <li class="has-sub nav-item">
+                <a href="#">
+                  <i class="icon-screen-desktop"></i>
+                  <span data-i18n="" class="menu-title">按风险程度</span>
+                </a>
                 <ul class="menu-content">
-                  <li><a href="chat.html" class="menu-item">Chat</a>
+                  <li><a href="funds-catalog.html?cid=7" class="menu-item">高风险</a>
                   </li>
-                  <li><a href="taskboard.html" class="menu-item">Taskboard</a>
+                  <li><a href="funds-catalog.html?cid=8" class="menu-item">中高风险</a>
                   </li>
-                  <li><a href="calendar.html" class="menu-item">Calendar</a>
+                  <li><a href="funds-catalog.html?cid=9" class="menu-item">中风险</a>
+                  </li>
+                  <li><a href="funds-catalog.html?cid=10" class="menu-item">中低风险</a>
+                  </li>
+                  <li><a href="funds-catalog.html?cid=11" class="menu-item">低风险</a>
                   </li>
                 </ul>
               </li>
-              <li class="has-sub nav-item"><a href="#"><i class="icon-magnet"></i><span data-i18n="" class="menu-title">UI Kit</span></a>
+              <li class="has-sub nav-item">
+                <a href="#">
+                  <i class="icon-magnet"></i>
+                  <span data-i18n="" class="menu-title">按基金管理人</span>
+                </a>
                 <ul class="menu-content">
-                  <li><a href="color-palette.html" class="menu-item">Color Palette</a>
+                  <li><a href="funds-catalog.html?cid=12" class="menu-item">博时基金</a>
                   </li>
-                  <li><a href="grids.html" class="menu-item">Grid</a>
+                  <li><a href="funds-catalog.html?cid=13" class="menu-item">广发基金</a>
                   </li>
-                  <li><a href="typography.html" class="menu-item">Typography</a>
+                  <li><a href="funds-catalog.html?cid=14" class="menu-item">中信保诚基金</a>
                   </li>
-                  <li><a href="syntax-highlighter.html" class="menu-item">Syntax Highlighter</a>
+                  <li><a href="funds-catalog.html?cid=15" class="menu-item">南方基金</a>
                   </li>
-                  <li><a href="helper-classes.html" class="menu-item">Helper Classes</a>
+                  <li><a href="funds-catalog.html?cid=16" class="menu-item">华夏基金</a>
                   </li>
-                  <li><a href="text-utilities.html" class="menu-item">Text Utilities</a>
+                  <li><a href="funds-catalog.html?cid=17" class="menu-item">工银瑞信基金</a>
                   </li>
-                  <li class="has-sub"><a href="#" class="menu-item">Icons</a>
-                    <ul class="menu-content">
-                      <li><a href="feather.html" class="menu-item">Feather</a>
-                      </li>
-                      <li><a href="font-awesome.html" class="menu-item">Font Awesome</a>
-                      </li>
-                      <li><a href="simple-line.html" class="menu-item">Simple Line</a>
-                      </li>
-                    </ul>
+                  <li><a href="funds-catalog.html?cid=18" class="menu-item">招商基金</a>
+                  </li>
+                  <li><a href="funds-catalog.html?cid=19" class="menu-item">万家基金</a>
+                  </li>
+                  <li><a href="funds-catalog.html?cid=20" class="menu-item">嘉实基金</a>
+                  </li>
+                  <li><a href="funds-catalog.html?cid=21" class="menu-item">易方达基金</a>
                   </li>
                 </ul>
               </li>
-              <li class=" nav-item"><a href="cards.html"><i class="icon-layers"></i><span data-i18n="" class="menu-title">Cards</span></a>
-              </li>
-              <li class="has-sub nav-item"><a href="#"><i class="icon-puzzle"></i><span data-i18n="" class="menu-title">Components</span></a>
-                <ul class="menu-content">
-                  <li class="has-sub"><a href="#" class="menu-item">Bootstrap</a>
-                    <ul class="menu-content">
-                      <li><a href="components-lists.html" class="menu-item">List</a>
-                      </li>
-                      <li><a href="components-buttons.html" class="menu-item">Buttons</a>
-                      </li>
-                      <li><a href="components-alerts.html" class="menu-item">Alerts</a>
-                      </li>
-                      <li><a href="components-badges.html" class="menu-item">Badges</a>
-                      </li>
-                      <li><a href="components-dropdowns.html" class="menu-item">Dropdowns</a>
-                      </li>
-                      <li><a href="components-inputgroups.html" class="menu-item">Input Groups</a>
-                      </li>
-                      <li><a href="components-media-objects.html" class="menu-item">Media Objects</a>
-                      </li>
-                      <li><a href="components-pagination.html" class="menu-item">Pagination</a>
-                      </li>
-                      <li><a href="components-progress.html" class="menu-item">Progress Bars</a>
-                      </li>
-                      <li><a href="components-modals.html" class="menu-item">Modals</a>
-                      </li>
-                      <li><a href="components-collapse.html" class="menu-item">Collapse</a>
-                      </li>
-                      <li><a href="components-accordion.html" class="menu-item">Accordion</a>
-                      </li>
-                      <li><a href="components-carousel.html" class="menu-item">Carousel</a>
-                      </li>
-                      <li><a href="components-datepicker.html" class="menu-item">Datepicker</a>
-                      </li>
-                      <li><a href="components-popover.html" class="menu-item">Popover</a>
-                      </li>
-                      <li><a href="components-tooltip.html" class="menu-item">Tooltip</a>
-                      </li>
-                      <li><a href="components-tabs.html" class="menu-item">Tabs</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="has-sub"><a href="#" class="menu-item">Extra</a>
-                    <ul class="menu-content">
-                      <li><a href="sweet-alerts.html" class="menu-item">Sweet Alert</a>
-                      </li>
-                      <li><a href="toastr.html" class="menu-item">Toastr</a>
-                      </li>
-                      <li><a href="upload.html" class="menu-item">Upload</a>
-                      </li>
-                      <li><a href="editor.html" class="menu-item">Editor</a>
-                      </li>
-                      <li><a href="dragndrop.html" class="menu-item">Drag and Drop</a>
-                      </li>
-                      <li><a href="tour.html" class="menu-item">Tour</a>
-                      </li>
-                      <li><a href="tags-input.html" class="menu-item">Input Tag</a>
-                      </li>
-                      <li><a href="switch.html" class="menu-item">Switch</a>
-                      </li>
-                      <li><a href="rating.html" class="menu-item">Rating</a>
-                      </li>
-                      <li><a href="typeahead.html" class="menu-item">Typeahead</a>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-              <li class="has-sub nav-item"><a href="#"><i class="icon-doc"></i><span data-i18n="" class="menu-title">Forms</span><span class="tag badge badge-pill badge-primary mt-1">New</span></a>
-                <ul class="menu-content">
-                  <li class="has-sub"><a href="#" class="menu-item">Elements</a>
-                    <ul class="menu-content">
-                      <li><a href="inputs.html" class="menu-item">Inputs</a>
-                      </li>
-                      <li><a href="input-groups.html" class="menu-item">Input Groups</a>
-                      </li>
-                      <li><a href="input-grid.html" class="menu-item">Input Grid</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="has-sub"><a href="#" class="menu-item">Layouts</a>
-                    <ul class="menu-content">
-                      <li><a href="basic-forms.html" class="menu-item">Basic Forms</a>
-                      </li>
-                      <li><a href="horizontal-forms.html" class="menu-item">Horizontal Forms</a>
-                      </li>
-                      <li><a href="hidden-labels.html" class="menu-item">Hidden Labels</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li><a href="validation-forms.html" class="menu-item">Validation</a>
-                  </li>
-                  <li><a href="wizard-forms.html" class="menu-item">Wizard</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="has-sub nav-item"><a href="#"><i class="icon-grid"></i><span data-i18n="" class="menu-title">Tables</span></a>
-                <ul class="menu-content">
-                  <li><a href="regular-table.html" class="menu-item">Regular</a>
-                  </li>
-                  <li><a href="extended-table.html" class="menu-item">Extended</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="has-sub nav-item"><a href="#"><i class="icon-notebook"></i><span data-i18n="" class="menu-title">Data Tables</span></a>
-                <ul class="menu-content">
-                  <li><a href="dt-basic-initialization.html" class="menu-item">Basic Initialisation</a>
-                  </li>
-                  <li><a href="dt-advanced-initialization.html" class="menu-item">Advanced initialisation</a>
-                  </li>
-                  <li><a href="dt-styling.html" class="menu-item">Styling</a>
-                  </li>
-                  <li><a href="dt-data-sources.html" class="menu-item">Data Sources</a>
-                  </li>
-                  <li><a href="dt-api.html" class="menu-item">API</a>
-                  </li>
-                </ul>
-              </li>
-              <li class=" nav-item"><a href="google-map.html"><i class="icon-map"></i><span data-i18n="" class="menu-title">Google Map</span></a>
-              </li>
-              <li class="has-sub nav-item"><a href="#"><i class="icon-pie-chart"></i><span data-i18n="" class="menu-title">Charts</span><span class="tag badge badge-pill badge-success white mt-1">2</span></a>
-                <ul class="menu-content">
-                  <li><a href="chartist.html" class="menu-item">Chartist</a>
-                  </li>
-                  <li><a href="chartjs.html" class="menu-item">ChartJs</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="has-sub nav-item"><a href="#"><i class="icon-docs"></i><span data-i18n="" class="menu-title">Pages</span></a>
-                <ul class="menu-content">
-                  <li><a href="forgot-password-page.html" class="menu-item">Forgot Password</a>
-                  </li>
-                  <li><a href="horizontal-timeline-page.html" class="menu-item">Horizontal Timeline</a>
-                  </li>
-                  <li><a href="vertical-timeline-page.html" class="menu-item">Vertical Timeline</a>
-                  </li>
-                  <li><a href="login-page.html" class="menu-item">Login</a>
-                  </li>
-                  <li><a href="register-page.html" class="menu-item">Register</a>
-                  </li>
-                  <li><a href="user-profile-page.html" class="menu-item">User Profile</a>
-                  </li>
-                  <li><a href="lock-screen-page.html" class="menu-item">Lock Screen</a>
-                  </li>
-                  <li><a href="invoice-page.html" class="menu-item">Invoice</a>
-                  </li>
-                  <li><a href="error-page.html" class="menu-item">Error</a>
-                  </li>
-                  <li><a href="coming-soon-page.html" class="menu-item">Coming Soon</a>
-                  </li>
-                  <li><a href="maintenance-page.html" class="menu-item">Maintenance</a>
-                  </li>
-                  <li><a href="gallery-page.html" class="menu-item">Gallery</a>
-                  </li>
-                  <li><a href="search.html" class="menu-item">Search</a>
-                  </li>
-                  <li><a href="faq.html" class="menu-item">FAQ</a>
-                  </li>
-                  <li><a href="knowledge-base.html" class="menu-item">Knowledge Base</a>
-                  </li>
-                </ul>
-              </li>
-              <li class=" nav-item"><a href="http://pixinvent.com/demo/convex-bootstrap-admin-dashboard-template/documentation"><i class="icon-book-open"></i><span data-i18n="" class="menu-title">Documentation</span></a>
-              </li>
-              <li class=" nav-item"><a href="https://pixinvent.ticksy.com/"><i class="icon-support"></i><span data-i18n="" class="menu-title">Support</span></a>
+              <li class=" nav-item">
+                <a href="funds-comments.html">
+                  <i class="icon-layers"></i>
+                  <span data-i18n="" class="menu-title">意见与反馈</span>
+                </a>
               </li>
             </ul>
           </div>
@@ -255,54 +131,62 @@
         <div class="sidebar-background"></div>
       </div>
 
-
+      <!-- 横bar -->
       <nav class="navbar navbar-expand-lg navbar-light bg-faded">
         <div class="container-fluid">
           <div class="navbar-header">
-            <button type="button" data-toggle="collapse" class="navbar-toggle d-lg-none float-left"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><span class="d-lg-none navbar-right navbar-collapse-toggle"><a class="open-navbar-container"><i class="ft-more-vertical"></i></a></span><a id="navbar-fullscreen" href="javascript:;" class="mr-2 display-inline-block apptogglefullscreen"><i class="ft-maximize blue-grey darken-4 toggleClass"></i>
-              <p class="d-none">fullscreen</p></a><a class="ml-2 display-inline-block"><i class="ft-shopping-cart blue-grey darken-4"></i>
+            <button type="button" data-toggle="collapse" class="navbar-toggle d-lg-none float-left">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span></button>
+              <span class="d-lg-none navbar-right navbar-collapse-toggle">
+                <a class="open-navbar-container">
+                  <i class="ft-more-vertical"></i></a></span>
+                  <a id="navbar-fullscreen" href="javascript:;" class="mr-2 display-inline-block apptogglefullscreen">
+              <p class="d-none">fullscreen</p></a><a class="ml-2 display-inline-block">
               <p class="d-none">cart</p></a>
-            <div class="dropdown ml-2 display-inline-block"><a id="apps" href="#" data-toggle="dropdown" class="nav-link position-relative dropdown-toggle"><i class="ft-edit blue-grey darken-4"></i><span class="mx-1 blue-grey darken-4 text-bold-400">Apps</span></a>
-              <div class="apps dropdown-menu">
-                <div class="arrow_box"><a href="chat.html" class="dropdown-item py-1"><span>Chat</span></a><a href="taskboard.html" class="dropdown-item py-1"><span>TaskBoard</span></a><a href="calendar.html" class="dropdown-item py-1"><span>Calendar</span></a></div>
-              </div>
-            </div>
           </div>
           <div class="navbar-container">
             <div id="navbarSupportedContent" class="collapse navbar-collapse">
               <ul class="navbar-nav">
-                <li class="nav-item mt-1 navbar-search text-left dropdown"><a id="search" href="#" data-toggle="dropdown" class="nav-link dropdown-toggle"><i class="ft-search blue-grey darken-4"></i></a>
+                <!-- 搜索栏 -->
+                <li class="nav-item mt-1 navbar-search text-left dropdown">
+                  <a id="search" href="" data-toggle="dropdown" class="nav-link dropdown-toggle">
+                    <i class="ft-search blue-grey darken-4"></i>
+                  </a>
                   <div aria-labelledby="search" class="search dropdown-menu dropdown-menu-right">
                     <div class="arrow_box_right">
                       <form role="search" class="navbar-form navbar-right">
                         <div class="position-relative has-icon-right mb-0">
-                          <input id="navbar-search" type="text" placeholder="Search" class="form-control"/>
+                          <input id="navbar-search" type="text" placeholder="输入基金编号、名字等" class="form-control"/>
                           <div class="form-control-position navbar-search-close"><i class="ft-x"></i></div>
                         </div>
                       </form>
                     </div>
                   </div>
                 </li>
-                <li class="dropdown nav-item mt-1"><a id="dropdownBasic" href="#" data-toggle="dropdown" class="nav-link position-relative dropdown-toggle"><i class="ft-flag blue-grey darken-4"></i><span class="selected-language d-none"></span></a>
-                  <div class="dropdown-menu dropdown-menu-right">
-                    <div class="arrow_box_right"><a href="javascript:;" class="dropdown-item py-1"><img src="app-assets/img/flags/us.png" alt="English Flag" class="langimg"/><span> English</span></a><a href="javascript:;" class="dropdown-item py-1"><img src="app-assets/img/flags/es.png" alt="Spanish Flag" class="langimg"/><span> Spanish</span></a><a href="javascript:;" class="dropdown-item py-1"><img src="app-assets/img/flags/br.png" alt="Portuguese Flag" class="langimg"/><span> Portuguese</span></a><a href="javascript:;" class="dropdown-item"><img src="app-assets/img/flags/de.png" alt="French Flag" class="langimg"/><span> French</span></a></div>
-                  </div>
-                </li>
-                <li class="dropdown nav-item mt-1"><a id="dropdownBasic2" href="#" data-toggle="dropdown" class="nav-link position-relative dropdown-toggle"><i class="ft-bell blue-grey darken-4"></i><span class="notification badge badge-pill badge-danger">4</span>
-                    <p class="d-none">Notifications</p></a>
-                  <div class="notification-dropdown dropdown-menu dropdown-menu-right">
-                    <div class="arrow_box_right">
-                      <div class="noti-list"><a class="dropdown-item noti-container py-2"><i class="ft-share info float-left d-block font-medium-4 mt-2 mr-2"></i><span class="noti-wrapper"><span class="noti-title line-height-1 d-block text-bold-400 info">New Order Received</span><span class="noti-text">Lorem ipsum dolor sit ametitaque in, et!</span></span></a><a class="dropdown-item noti-container py-2"><i class="ft-save warning float-left d-block font-medium-4 mt-2 mr-2"></i><span class="noti-wrapper"><span class="noti-title line-height-1 d-block text-bold-400 warning">New User Registered</span><span class="noti-text">Lorem ipsum dolor sit ametitaque in </span></span></a><a class="dropdown-item noti-container py-2"><i class="ft-repeat danger float-left d-block font-medium-4 mt-2 mr-2"></i><span class="noti-wrapper"><span class="noti-title line-height-1 d-block text-bold-400 danger">New Order Received</span><span class="noti-text">Lorem ipsum dolor sit ametest?</span></span></a><a class="dropdown-item noti-container py-2"><i class="ft-shopping-cart success float-left d-block font-medium-4 mt-2 mr-2"></i><span class="noti-wrapper"><span class="noti-title line-height-1 d-block text-bold-400 success">New Item In Your Cart</span><span class="noti-text">Lorem ipsum dolor sit ametnatus aut.</span></span></a><a class="dropdown-item noti-container py-2"><i class="ft-heart info float-left d-block font-medium-4 mt-2 mr-2"></i><span class="noti-wrapper"><span class="noti-title line-height-1 d-block text-bold-400 info">New Sale</span><span class="noti-text">Lorem ipsum dolor sit ametnatus aut.</span></span></a><a class="dropdown-item noti-container py-2"><i class="ft-box warning float-left d-block font-medium-4 mt-2 mr-2"></i><span class="noti-wrapper"><span class="noti-title line-height-1 d-block text-bold-400 warning">Order Delivered</span><span class="noti-text">Lorem ipsum dolor sit ametnatus aut.</span></span></a></div><a class="noti-footer primary text-center d-block border-top border-top-blue-grey border-top-lighten-4 text-bold-400 py-1">Read All Notifications</a>
-                    </div>
-                  </div>
-                </li>
-                <li class="nav-item mt-1 d-none d-lg-block"><a id="navbar-notification-sidebar" href="javascript:;" class="nav-link position-relative notification-sidebar-toggle"><i class="icon-equalizer blue-grey darken-4"></i>
-                    <p class="d-none">Notifications Sidebar</p></a></li>
-                <li class="dropdown nav-item mr-0"><a id="dropdownBasic3" href="#" data-toggle="dropdown" class="nav-link position-relative dropdown-user-link dropdown-toggle"><span class="avatar avatar-online"><img id="navbar-avatar" src="app-assets/img/portrait/small/avatar-s-3.jpg" alt="avatar"/></span>
-                    <p class="d-none">User Settings</p></a>
+                <!-- 头像 -->
+                <li class="dropdown nav-item mr-0">
+                  <a id="dropdownBasic3" href="userindex.html" data-toggle="dropdown" class="nav-link position-relative dropdown-user-link dropdown-toggle">
+                    <span class="avatar avatar-online">
+                      <img id="navbar-avatar" src="app-assets/img/portrait/small/avatar.jpg" alt="avatar"/>
+                    </span>
+                  </a>
                   <div aria-labelledby="dropdownBasic3" class="dropdown-menu dropdown-menu-right">
-                    <div class="arrow_box_right"><a href="user-profile-page.html" class="dropdown-item py-1"><i class="ft-edit mr-2"></i><span>My Profile</span></a><a href="chat.html" class="dropdown-item py-1"><i class="ft-message-circle mr-2"></i><span>My Chat</span></a><a href="javascript:;" class="dropdown-item py-1"><i class="ft-settings mr-2"></i><span>Settings</span></a>
-                      <div class="dropdown-divider"></div><a href="javascript:;" class="dropdown-item"><i class="ft-power mr-2"></i><span>Logout</span></a>
+                    <div class="arrow_box_right">
+                      <a href="userindex.html" class="dropdown-item py-1">
+                        <i class="ft-edit mr-2"></i><span>My Profile</span>
+                      </a>
+                      <a href="javascript:;" class="dropdown-item py-1">
+                        <i class="ft-settings mr-2"></i>
+                        <span>Settings</span>
+                      </a>
+                      <div class="dropdown-divider"></div>
+                      <a href="javascript:;" class="dropdown-item">
+                        <i class="ft-power mr-2"></i>
+                        <span>Logout</span>
+                      </a>
                     </div>
                   </div>
                 </li>
@@ -316,6 +200,8 @@
         <div class="main-content">
           <div class="content-wrapper">
             <div class="container-fluid"><!--Statistics cards Starts-->
+
+<!-- 基础信息栏 -->
 <div class="row">
 	<div class="col-xl-4 col-lg-6 col-md-6 col-12">
 		<div class="card bg-white">
@@ -323,8 +209,8 @@
 				<div class="card-block pt-2 pb-0">
 					<div class="media">
 						<div class="media-body white text-left">
-							<h4 class="font-medium-5 card-title mb-0">$5789</h4>
-							<span class="grey darken-1">Total Visits</span>
+							<h4 class="font-medium-5 card-title mb-0">基本信息</h4>
+							<span class="grey darken-1"></span>
 						</div>
 						<div class="media-right text-right">
 							<i class="icon-cup font-large-1 primary"></i>
@@ -342,8 +228,8 @@
 				<div class="card-block pt-2 pb-0">
 					<div class="media">
 						<div class="media-body white text-left">
-							<h4 class="font-medium-5 card-title mb-0">$4567</h4>
-							<span class="grey darken-1">Total Sales</span>
+							<h4 class="font-medium-5 card-title mb-0">特色数据</h4>
+							<span class="grey darken-1"></span>
 						</div>
 						<div class="media-right text-right">
 							<i class="icon-wallet font-large-1 warning"></i>
@@ -380,26 +266,29 @@
 
 <!--Line with Area Chart 1 Starts-->
 <div class="row match-height">
+  <!-- echarts走向栏 -->
 	<div class="col-xl-8 col-lg-12 col-12">
 		<div class="card">
 			<div class="card-header">
         		<div class="card-title-wrap bar-success">
-					<h4 class="card-title">Product Valuation</h4>
+					<h4 class="card-title">XXXXXXX基金——动态走向</h4>
 				</div>
 			</div>
 			<div class="card-body">
 				<div class="card-block">
-					<div id="line-chart" class="height-300 lineChart lineChartShadow">						
+					<div id="main" style="width: 650px;height:500px;">						
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
+  </div>
+  
+  <!-- 推荐栏 -->
   <div class="col-xl-4 col-lg-12 col-12">
     <div class="card">
       <div class="card-header">
         <div class="card-title-wrap bar-danger">
-          <h4 class="card-title">Today's Activity</h4>
+          <h4 class="card-title">可能你会感兴趣</h4>
         </div>
       </div>
       <div class="card-body">
@@ -407,52 +296,32 @@
           <div class="timeline">
             <ul class="list-unstyled base-timeline activity-timeline">
               <li class="">
-                <div class="timeline-icon bg-danger">
-                  <i class="fa fa-tasks"></i>
-                </div>
-                <div class="act-time">Today</div>
+                <div class="act-time">管理人</div>
                 <div class="base-timeline-info">
-                  <a href="#" class="text-uppercase text-danger">Task Added</a>
+                  <a href="#" class="text-uppercase text-danger">基金名字</a>
                 </div>
-                <small class="text-muted">
-                                    25 mins ago
-                                </small>
+                <small class="text-muted">收益率</small>
               </li>
               <li class="">
-                <div class="timeline-icon bg-primary">
-                  <i class="fa fa-handshake-o"></i>
-                </div>
-                <div class="act-time">Yesterday</div>
+                <div class="act-time">管理人</div>
                 <div class="base-timeline-info">
-                  <a href="#" class="text-uppercase text-primary">Deal Added</a>
+                  <a href="#" class="text-uppercase text-primary">基金名字</a>
                 </div>
-                <small class="text-muted">
-                                    23 hours ago
-                                </small>
+                <small class="text-muted">收益率</small>
               </li>
               <li class="">
-                <div class="timeline-icon bg-dark">
-                  <i class="fa fa-tasks"></i>
-                </div>
-                <div class="act-time">09 March</div>
+                <div class="act-time">管理人</div>
                 <div class="base-timeline-info">
-                  <a href="#" class="text-uppercase text-dark">Task Updated</a>
+                  <a href="#" class="text-uppercase text-dark">基金名字</a>
                 </div>
-                <small class="text-muted">
-                                    15 days ago
-                                </small>
+                <small class="text-muted">收益率</small>
               </li>
-              <li class="">
-                <div class="timeline-icon bg-warning">
-                  <i class="fa fa-handshake-o"></i>
-                </div>
-                <div class="act-time">04 March</div>
+              <li class=""> 
+                <div class="act-time">管理人</div>
                 <div class="base-timeline-info">
-                  <a href="#" class="text-uppercase text-warning">Started Task</a>
+                  <a href="#" class="text-uppercase text-warning">基金名字</a>
                 </div>
-                <small class="text-muted">
-                                    20 days ago
-                                </small>
+                <small class="text-muted">收益率</small>
               </li>
             </ul>
           </div>
@@ -463,405 +332,24 @@
 </div>
 <!--Line with Area Chart 1 Ends-->
 
-<div class="row match-height">
-	<div class="col-xl-4 col-lg-12 col-12">
-		<div class="card">
-			<div class="card-header">
-        		<div class="card-title-wrap bar-warning">
-					<h4 class="card-title">Sales</h4>
-				</div>
-			</div>
-			<div class="card-body">
-				<p class="font-medium-2 text-muted text-center pb-2">Last 12 Months Sales</p>
-				<div id="Stack-bar-chart" class="height-300 Stackbarchart mb-2">				
-				</div>
-			</div>
-		</div>
-	</div>
-  <div class="col-12 col-md-8" id="recent-sales">
-    <div class="card">
-      <div class="card-header">
-        <div class="card-title-wrap bar-primary">
-          <h4 class="card-title">Recent Buyers</h4>
-        </div>
-        <a class="heading-elements-toggle">
-					<i class="la la-ellipsis-v font-medium-3"></i>
-				</a>
-      </div>
-      <div class="card-content mt-1">
-        <div class="table-responsive">
-          <table class="table table-hover table-xl mb-0" id="recent-orders">
-            <thead>
-              <tr>
-                <th class="border-top-0">Product</th>
-                <th class="border-top-0">Customers</th>
-                <th class="border-top-0">Categories</th>
-                <th class="border-top-0">Popularity</th>
-                <th class="border-top-0">Amount</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="text-truncate">iPone X</td>
-                <td class="text-truncate">Jim</td>
-                <td>
-                  <button class="btn btn-sm btn-outline-danger round mb-0" type="button">Mobile</button>
-                </td>
-                <td>
-                  <div class="box-shadow-2 mt-1">
-                  	<div class="progress" style="height: 8px;">
-                    	<div class="progress-bar progress-bar-striped bg-danger" role="progressbar" aria-valuenow="85" aria-valuemin="20" aria-valuemax="100" style="width:85%"></div>
-                    </div>
-                  </div>
-                </td>
-                <td class="text-truncate">$ 1200.00</td>
-              </tr>
-              <tr>
-                <td class="text-truncate">iPad</td>
-                <td class="text-truncate">Jack</td>
-                <td>
-                  <button class="btn btn-sm btn-outline-success round mb-0" type="button">Tablet</button>
-                </td>
-                <td>
-                  <div class="box-shadow-2 mt-1">
-                    <div class="progress" style="height: 8px;">
-                    	<div class="progress-bar progress-bar-striped bg-success" role="progressbar" aria-valuenow="75" aria-valuemin="20" aria-valuemax="100" style="width:75%"></div>
-                    </div>
-                  </div>
-                </td>
-                <td class="text-truncate">$ 1190.00</td>
-              </tr>
-              <tr>
-                <td class="text-truncate">OnePlus</td>
-                <td class="text-truncate">Dolly</td>
-                <td>
-                  <button class="btn btn-sm btn-outline-danger round mb-0" type="button">Mobile</button>
-                </td>
-                <td>
-                  <div class="box-shadow-2 mt-1">
-                    <div class="progress" style="height: 8px;">
-                    	<div class="progress-bar progress-bar-striped bg-danger" role="progressbar" aria-valuenow="70" aria-valuemin="20" aria-valuemax="100" style="width:70%"></div>
-                    </div>
-                  </div>
-                </td>
-                <td class="text-truncate">$ 999.00</td>
-              </tr>
-              <tr>
-                <td class="text-truncate">ZenPad</td>
-                <td class="text-truncate">Sam</td>
-                <td>
-                  <button class="btn btn-sm btn-outline-success round mb-0" type="button">Tablet</button>
-                </td>
-                <td>
-                  <div class="box-shadow-2 mt-1">
-                    <div class="progress" style="height: 8px;">
-                    	<div class="progress-bar progress-bar-striped bg-success" role="progressbar" aria-valuenow="60" aria-valuemin="20" aria-valuemax="100" style="width:60%"></div>
-                    </div>
-                  </div>
-                </td>
-                <td class="text-truncate">$ 1150.00</td>
-              </tr>
-              <tr>
-                <td class="text-truncate">Pixel 2</td>
-                <td class="text-truncate">John</td>
-                <td>
-                  <button class="btn btn-sm btn-outline-danger round mb-0" type="button">Mobile</button>
-                </td>
-                <td>
-                  <div class="box-shadow-2 mt-1">
-                    <div class="progress" style="height: 8px;">
-                    	<div class="progress-bar progress-bar-striped bg-danger" role="progressbar" aria-valuenow="45" aria-valuemin="20" aria-valuemax="100" style="width:45%"></div>
-                    </div>
-                  </div>
-                </td>
-                <td class="text-truncate">$ 1180.00</td>
-              </tr>
-              <tr>
-                <td class="text-truncate">Pixel 2</td>
-                <td class="text-truncate">John</td>
-                <td>
-                  <button class="btn btn-sm btn-outline-danger round mb-0" type="button">Mobile</button>
-                </td>
-                <td>
-                  <div class="box-shadow-2 mt-1">
-                    <div class="progress" style="height: 8px;">
-                    	<div class="progress-bar progress-bar-striped bg-danger" role="progressbar" aria-valuenow="45" aria-valuemin="20" aria-valuemax="100" style="width:45%"></div>
-                    </div>
-                  </div>
-                </td>
-                <td class="text-truncate">$ 1180.00</td>
-              </tr>
-              <tr>
-                <td class="text-truncate">Pixel 1</td>
-                <td class="text-truncate">Tony</td>
-                <td>
-                  <button class="btn btn-sm btn-outline-danger round mb-0" type="button">Mobile</button>
-                </td>
-                <td>
-                  <div class="box-shadow-2 mt-1">
-                    <div class="progress" style="height: 8px;">
-                    	<div class="progress-bar progress-bar-striped bg-danger" role="progressbar" aria-valuenow="45" aria-valuemin="20" aria-valuemax="100" style="width:45%"></div>
-                    </div>
-                  </div>
-                </td>
-                <td class="text-truncate">$ 1080.00</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="row match-height">
-	<div class="col-xl-6 col-lg-12">
-		<div class="card">
-			<div class="card-header">
-        		<div class="card-title-wrap bar-primary">
-					<h4 class="card-title">Product Statistics</h4>
-				</div>
-			</div>
-			<div class="card-body">
-
-				<p class="font-medium-2 text-muted text-center">Hobbies</p>
-				<div id="bar-chart" class="height-250 BarChartShadow BarChart">					
-				</div>
-
-				<div class="card-block">
-					<div class="row">
-						<div class="col text-center">
-							<span class="gradient-pomegranate d-block rounded-circle mx-auto mb-2" style="width:10px; height:10px;"></span>
-							<span class="font-large-1 d-block mb-2">48</span>
-							<span>Sport</span>
-						</div>
-						<div class="col text-center">
-							<span class="gradient-green-tea d-block rounded-circle mx-auto mb-2" style="width:10px; height:10px;"></span>
-							<span class="font-large-1 d-block mb-2">9</span>
-							<span>Music</span>
-						</div>
-						<div class="col text-center">
-							<span class="gradient-blackberry d-block rounded-circle mx-auto mb-2" style="width:10px; height:10px;"></span>
-							<span class="font-large-1 d-block mb-2">26</span>
-							<span>Travel</span>
-						</div>
-						<div class="col text-center">
-							<span class="gradient-ibiza-sunset d-block rounded-circle mx-auto mb-2" style="width:10px; height:10px;"></span>
-							<span class="font-large-1 d-block mb-2">17</span>
-							<span>News</span>
-						</div>
-			            <div class="col text-center">
-			              <span class="gradient-back-to-earth d-block rounded-circle mx-auto mb-2" style="width:10px; height:10px;"></span>
-			              <span class="font-large-1 d-block mb-2">52</span>
-			              <span>Blog</span>
-			            </div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="col-xl-6 col-lg-12">
-		<div class="card">
-			<div class="card-header">
-        		<div class="card-title-wrap bar-warning">
-					<h4 class="card-title">Project Stats</h4>
-				</div>
-			</div>
-			<div class="card-body">
-
-				<p class="font-medium-2 text-muted text-center">Project Tasks</p>
-				<div id="donut-dashboard-chart" class="height-250 donut donutShadow">
-				</div>
-
-				<div class="card-block">
-					<div class="row my-3">
-						<div class="col">
-			              	<span class="mb-1 text-muted d-block">23% - Started</span>
-			              	<div class="progress" style="height: 8px;">
-			                	<div class="progress-bar gradient-blackberry" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-			              	</div>
-			            </div>
-			            <div class="col">
-			              	<span class="mb-1 text-muted d-block">35% - In Progress</span>
-			              	<div class="progress" style="height: 8px;">
-			                	<div class="progress-bar gradient-pomegranate" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-			              	</div>
-			            </div>
-			            <div class="col">
-			              	<span class="mb-1 text-muted d-block">14% - Done</span>
-			              	<div class="progress" style="height: 8px;">
-			                	<div class="progress-bar gradient-green-tea" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-			              	</div>
-			            </div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
             </div>
           </div>
         </div>
 
         <footer class="footer footer-static footer-light">
-          <p class="clearfix text-muted text-center px-2"><span>Copyright  &copy; 2018 <a href="http://bootstrapmb.com" id="pixinventLink" target="_blank" class="text-bold-800 primary darken-2">PIXINVENT </a>, All rights reserved. </span></p>
+          <p class="clearfix text-muted text-center px-2">
+            <span>Copyright  &copy; 2020 
+              <a href="#" id="pixinventLink" target="_blank" class="text-bold-800 primary darken-2">KASEYMZHOU  
+              </a>, All rights reserved. 
+            </span>
+          </p>
         </footer>
 
       </div>
     </div>
     <!-- ////////////////////////////////////////////////////////////////////////////-->
 
-    <aside id="notification-sidebar" class="notification-sidebar d-none d-sm-none d-md-block"><a class="notification-sidebar-close"><i class="ft-x font-medium-3"></i></a>
-      <div class="side-nav notification-sidebar-content">
-        <div class="row">
-          <div class="col-12 mt-1">
-            <ul class="nav nav-tabs">
-              <li class="nav-item"><a id="base-tab1" data-toggle="tab" aria-controls="base-tab1" href="#activity-tab" aria-expanded="true" class="nav-link active"><strong>Activity</strong></a></li>
-              <li class="nav-item"><a id="base-tab2" data-toggle="tab" aria-controls="base-tab2" href="#settings-tab" aria-expanded="false" class="nav-link"><strong>Settings</strong></a></li>
-            </ul>
-            <div class="tab-content">
-              <div id="activity-tab" role="tabpanel" aria-expanded="true" aria-labelledby="base-tab1" class="tab-pane active">
-                <div id="activity-timeline" class="col-12 timeline-left">
-                  <h6 class="mt-1 mb-3 text-bold-400">RECENT ACTIVITY</h6>
-                  <div class="timeline">
-                    <ul class="list-unstyled base-timeline activity-timeline ml-0">
-                      <li>
-                        <div class="timeline-icon bg-danger"><i class="ft-shopping-cart"></i></div>
-                        <div class="base-timeline-info"><a href="#" class="text-uppercase text-danger">Update</a><span class="d-block">Jim Doe Purchased new equipments for zonal office.</span></div><small class="text-muted">just now</small>
-                      </li>
-                      <li>
-                        <div class="timeline-icon bg-primary"><i class="fa fa-plane"></i></div>
-                        <div class="base-timeline-info"><a href="#" class="text-uppercase text-primary">Added</a><span class="d-block">Your Next flight for USA will be on 15th August 2015.</span></div><small class="text-muted">25 hours ago</small>
-                      </li>
-                      <li>
-                        <div class="timeline-icon bg-dark"><i class="ft-mic"></i></div>
-                        <div class="base-timeline-info"><a href="#" class="text-uppercase text-dark">Assined</a><span class="d-block">Natalya Parker Send you a voice mail for next conference.</span></div><small class="text-muted">15 days ago</small>
-                      </li>
-                      <li>
-                        <div class="timeline-icon bg-warning"><i class="ft-map-pin"></i></div>
-                        <div class="base-timeline-info"><a href="#" class="text-uppercase text-warning">New</a><span class="d-block">Jessy Jay open a new store at S.G Road.</span></div><small class="text-muted">20 days ago</small>
-                      </li>
-                      <li>
-                        <div class="timeline-icon bg-primary"><i class="ft-inbox"></i></div>
-                        <div class="base-timeline-info"><a href="#" class="text-uppercase text-primary">Added</a><span class="d-block">voice mail for conference.</span></div><small class="text-muted">2 Week Ago</small>
-                      </li>
-                      <li>
-                        <div class="timeline-icon bg-danger"><i class="ft-mic"></i></div>
-                        <div class="base-timeline-info"><a href="#" class="text-uppercase text-danger">Update</a><span class="d-block">Natalya Parker Jessy Jay open a new store at S.G Road.</span></div><small class="text-muted">1 Month Ago</small>
-                      </li>
-                      <li>
-                        <div class="timeline-icon bg-dark"><i class="ft-inbox"></i></div>
-                        <div class="base-timeline-info"><a href="#" class="text-uppercase text-dark">Assined</a><span class="d-block">Natalya Parker Send you a voice mail for Updated conference.</span></div><small class="text-muted">1 Month ago</small>
-                      </li>
-                      <li>
-                        <div class="timeline-icon bg-warning"><i class="ft-map-pin"></i></div>
-                        <div class="base-timeline-info"><a href="#" class="text-uppercase text-warning">New</a><span class="d-block">Started New project with Jessie Lee.</span></div><small class="text-muted">2 Month ago</small>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div id="settings-tab" aria-labelledby="base-tab2" class="tab-pane">
-                <div id="settings" class="col-12">
-                  <h6 class="mt-1 mb-3 text-bold-400">GENERAL SETTINGS</h6>
-                  <ul class="list-unstyled">
-                    <li>
-                      <div class="togglebutton">
-                        <div class="switch"><span class="text-bold-500">Notifications</span>
-                          <div class="float-right">
-                            <div class="form-group">
-                              <div class="custom-control custom-checkbox mb-2 mr-sm-2 mb-sm-0">
-                                <input id="notifications1" checked="checked" type="checkbox" class="custom-control-input">
-                                <label for="notifications1" class="custom-control-label"></label>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <p>Use checkboxes when looking for yes or no answers.</p>
-                    </li>
-                    <li>
-                      <div class="togglebutton">
-                        <div class="switch"><span class="text-bold-500">Show recent activity</span>
-                          <div class="float-right">
-                            <div class="form-group">
-                              <div class="custom-control custom-checkbox mb-2 mr-sm-2 mb-sm-0">
-                                <input id="recent-activity1" checked="checked" type="checkbox" class="custom-control-input">
-                                <label for="recent-activity1" class="custom-control-label"></label>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <p>The for attribute is necessary to bind our custom checkbox with the input.</p>
-                    </li>
-                    <li>
-                      <div class="togglebutton">
-                        <div class="switch"><span class="text-bold-500">Notifications</span>
-                          <div class="float-right">
-                            <div class="form-group">
-                              <div class="custom-control custom-checkbox mb-2 mr-sm-2 mb-sm-0">
-                                <input id="notifications2" type="checkbox" class="custom-control-input">
-                                <label for="notifications2" class="custom-control-label"></label>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <p>Use checkboxes when looking for yes or no answers.</p>
-                    </li>
-                    <li>
-                      <div class="togglebutton">
-                        <div class="switch"><span class="text-bold-500">Show recent activity</span>
-                          <div class="float-right">
-                            <div class="form-group">
-                              <div class="custom-control custom-checkbox mb-2 mr-sm-2 mb-sm-0">
-                                <input id="recent-activity2" type="checkbox" class="custom-control-input">
-                                <label for="recent-activity2" class="custom-control-label"></label>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <p>The for attribute is necessary to bind our custom checkbox with the input.</p>
-                    </li>
-                    <li>
-                      <div class="togglebutton">
-                        <div class="switch"><span class="text-bold-500">Show your emails</span>
-                          <div class="float-right">
-                            <div class="form-group">
-                              <div class="custom-control custom-checkbox mb-2 mr-sm-2 mb-sm-0">
-                                <input id="show-emails" type="checkbox" class="custom-control-input">
-                                <label for="show-emails" class="custom-control-label"></label>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <p>Use checkboxes when looking for yes or no answers.</p>
-                    </li>
-                    <li>
-                      <div class="togglebutton">
-                        <div class="switch"><span class="text-bold-500">Show Task statistics</span>
-                          <div class="float-right">
-                            <div class="form-group">
-                              <div class="custom-control custom-checkbox mb-2 mr-sm-2 mb-sm-0">
-                                <input id="show-stats" checked="checked" type="checkbox" class="custom-control-input">
-                                <label for="show-stats" class="custom-control-label"></label>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <p>The for attribute is necessary to bind our custom checkbox with the input.</p>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </aside>
+    
     <!-- BEGIN VENDOR JS-->
     <script src="app-assets/vendors/js/core/jquery-3.3.1.min.js"></script>
     <script src="app-assets/vendors/js/core/popper.min.js"></script>
@@ -873,7 +361,7 @@
     <script src="app-assets/vendors/js/pace/pace.min.js"></script>
     <!-- BEGIN VENDOR JS-->
     <!-- BEGIN PAGE VENDOR JS-->
-    <script src="app-assets/vendors/js/chartist.min.js"></script>
+    <!-- <script src="app-assets/vendors/js/chartist.min.js"></script> -->
     <!-- END PAGE VENDOR JS-->
     <!-- BEGIN CONVEX JS-->
     <script src="app-assets/js/app-sidebar.js"></script>
@@ -882,5 +370,334 @@
     <!-- BEGIN PAGE LEVEL JS-->
     <script src="app-assets/js/dashboard-ecommerce.js"></script>
     <!-- END PAGE LEVEL JS-->
+
+    <script>
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('main'));
+
+    // 指定图表的配置项和数据
+    var upColor = '#ec0000';
+    var upBorderColor = '#8A0000';
+    var downColor = '#00da3c';
+    var downBorderColor = '#008F28';
+
+
+    // 数据意义：开盘(open)，收盘(close)，最低(lowest)，最高(highest)
+    var data0 = splitData([
+        ['2013/1/24', 2320.26,2320.26,2287.3,2362.94],
+        ['2013/1/25', 2300,2291.3,2288.26,2308.38],
+        ['2013/1/28', 2295.35,2346.5,2295.35,2346.92],
+        ['2013/1/29', 2347.22,2358.98,2337.35,2363.8],
+        ['2013/1/30', 2360.75,2382.48,2347.89,2383.76],
+        ['2013/1/31', 2383.43,2385.42,2371.23,2391.82],
+        ['2013/2/1', 2377.41,2419.02,2369.57,2421.15],
+        ['2013/2/4', 2425.92,2428.15,2417.58,2440.38],
+        ['2013/2/5', 2411,2433.13,2403.3,2437.42],
+        ['2013/2/6', 2432.68,2434.48,2427.7,2441.73],
+        ['2013/2/7', 2430.69,2418.53,2394.22,2433.89],
+        ['2013/2/8', 2416.62,2432.4,2414.4,2443.03],
+        ['2013/2/18', 2441.91,2421.56,2415.43,2444.8],
+        ['2013/2/19', 2420.26,2382.91,2373.53,2427.07],
+        ['2013/2/20', 2383.49,2397.18,2370.61,2397.94],
+        ['2013/2/21', 2378.82,2325.95,2309.17,2378.82],
+        ['2013/2/22', 2322.94,2314.16,2308.76,2330.88],
+        ['2013/2/25', 2320.62,2325.82,2315.01,2338.78],
+        ['2013/2/26', 2313.74,2293.34,2289.89,2340.71],
+        ['2013/2/27', 2297.77,2313.22,2292.03,2324.63],
+        ['2013/2/28', 2322.32,2365.59,2308.92,2366.16],
+        ['2013/3/1', 2364.54,2359.51,2330.86,2369.65],
+        ['2013/3/4', 2332.08,2273.4,2259.25,2333.54],
+        ['2013/3/5', 2274.81,2326.31,2270.1,2328.14],
+        ['2013/3/6', 2333.61,2347.18,2321.6,2351.44],
+        ['2013/3/7', 2340.44,2324.29,2304.27,2352.02],
+        ['2013/3/8', 2326.42,2318.61,2314.59,2333.67],
+        ['2013/3/11', 2314.68,2310.59,2296.58,2320.96],
+        ['2013/3/12', 2309.16,2286.6,2264.83,2333.29],
+        ['2013/3/13', 2282.17,2263.97,2253.25,2286.33],
+        ['2013/3/14', 2255.77,2270.28,2253.31,2276.22],
+        ['2013/3/15', 2269.31,2278.4,2250,2312.08],
+        ['2013/3/18', 2267.29,2240.02,2239.21,2276.05],
+        ['2013/3/19', 2244.26,2257.43,2232.02,2261.31],
+        ['2013/3/20', 2257.74,2317.37,2257.42,2317.86],
+        ['2013/3/21', 2318.21,2324.24,2311.6,2330.81],
+        ['2013/3/22', 2321.4,2328.28,2314.97,2332],
+        ['2013/3/25', 2334.74,2326.72,2319.91,2344.89],
+        ['2013/3/26', 2318.58,2297.67,2281.12,2319.99],
+        ['2013/3/27', 2299.38,2301.26,2289,2323.48],
+        ['2013/3/28', 2273.55,2236.3,2232.91,2273.55],
+        ['2013/3/29', 2238.49,2236.62,2228.81,2246.87],
+        ['2013/4/1', 2229.46,2234.4,2227.31,2243.95],
+        ['2013/4/2', 2234.9,2227.74,2220.44,2253.42],
+        ['2013/4/3', 2232.69,2225.29,2217.25,2241.34],
+        ['2013/4/8', 2196.24,2211.59,2180.67,2212.59],
+        ['2013/4/9', 2215.47,2225.77,2215.47,2234.73],
+        ['2013/4/10', 2224.93,2226.13,2212.56,2233.04],
+        ['2013/4/11', 2236.98,2219.55,2217.26,2242.48],
+        ['2013/4/12', 2218.09,2206.78,2204.44,2226.26],
+        ['2013/4/15', 2199.91,2181.94,2177.39,2204.99],
+        ['2013/4/16', 2169.63,2194.85,2165.78,2196.43],
+        ['2013/4/17', 2195.03,2193.8,2178.47,2197.51],
+        ['2013/4/18', 2181.82,2197.6,2175.44,2206.03],
+        ['2013/4/19', 2201.12,2244.64,2200.58,2250.11],
+        ['2013/4/22', 2236.4,2242.17,2232.26,2245.12],
+        ['2013/4/23', 2242.62,2184.54,2182.81,2242.62],
+        ['2013/4/24', 2187.35,2218.32,2184.11,2226.12],
+        ['2013/4/25', 2213.19,2199.31,2191.85,2224.63],
+        ['2013/4/26', 2203.89,2177.91,2173.86,2210.58],
+        ['2013/5/2', 2170.78,2174.12,2161.14,2179.65],
+        ['2013/5/3', 2179.05,2205.5,2179.05,2222.81],
+        ['2013/5/6', 2212.5,2231.17,2212.5,2236.07],
+        ['2013/5/7', 2227.86,2235.57,2219.44,2240.26],
+        ['2013/5/8', 2242.39,2246.3,2235.42,2255.21],
+        ['2013/5/9', 2246.96,2232.97,2221.38,2247.86],
+        ['2013/5/10', 2228.82,2246.83,2225.81,2247.67],
+        ['2013/5/13', 2247.68,2241.92,2231.36,2250.85],
+        ['2013/5/14', 2238.9,2217.01,2205.87,2239.93],
+        ['2013/5/15', 2217.09,2224.8,2213.58,2225.19],
+        ['2013/5/16', 2221.34,2251.81,2210.77,2252.87],
+        ['2013/5/17', 2249.81,2282.87,2248.41,2288.09],
+        ['2013/5/20', 2286.33,2299.99,2281.9,2309.39],
+        ['2013/5/21', 2297.11,2305.11,2290.12,2305.3],
+        ['2013/5/22', 2303.75,2302.4,2292.43,2314.18],
+        ['2013/5/23', 2293.81,2275.67,2274.1,2304.95],
+        ['2013/5/24', 2281.45,2288.53,2270.25,2292.59],
+        ['2013/5/27', 2286.66,2293.08,2283.94,2301.7],
+        ['2013/5/28', 2293.4,2321.32,2281.47,2322.1],
+        ['2013/5/29', 2323.54,2324.02,2321.17,2334.33],
+        ['2013/5/30', 2316.25,2317.75,2310.49,2325.72],
+        ['2013/5/31', 2320.74,2300.59,2299.37,2325.53],
+        ['2013/6/3', 2300.21,2299.25,2294.11,2313.43],
+        ['2013/6/4', 2297.1,2272.42,2264.76,2297.1],
+        ['2013/6/5', 2270.71,2270.93,2260.87,2276.86],
+        ['2013/6/6', 2264.43,2242.11,2240.07,2266.69],
+        ['2013/6/7', 2242.26,2210.9,2205.07,2250.63],
+        ['2013/6/13', 2190.1,2148.35,2126.22,2190.1]
+    ]);
+
+
+    function splitData(rawData) {
+        var categoryData = [];
+        var values = []
+        for (var i = 0; i < rawData.length; i++) {
+            categoryData.push(rawData[i].splice(0, 1)[0]);
+            values.push(rawData[i])
+        }
+        return {
+            categoryData: categoryData,
+            values: values
+        };
+    }
+
+    function calculateMA(dayCount) {
+        var result = [];
+        for (var i = 0, len = data0.values.length; i < len; i++) {
+            if (i < dayCount) {
+                result.push('-');
+                continue;
+            }
+            var sum = 0;
+            for (var j = 0; j < dayCount; j++) {
+                sum += data0.values[i - j][1];
+            }
+            result.push(sum / dayCount);
+        }
+        return result;
+    }
+
+
+
+    option = {
+        title: {
+            text: '上证指数',
+            left: 0
+        },
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {
+                type: 'cross'
+            }
+        },
+        legend: {
+            data: ['日K', 'MA5', 'MA10', 'MA20', 'MA30']
+        },
+        grid: {
+            left: '10%',
+            right: '10%',
+            bottom: '15%'
+        },
+        xAxis: {
+            type: 'category',
+            data: data0.categoryData,
+            scale: true,
+            boundaryGap: false,
+            axisLine: {onZero: false},
+            splitLine: {show: false},
+            splitNumber: 20,
+            min: 'dataMin',
+            max: 'dataMax'
+        },
+        yAxis: {
+            scale: true,
+            splitArea: {
+                show: true
+            }
+        },
+        dataZoom: [
+            {
+                type: 'inside',
+                start: 50,
+                end: 100
+            },
+            {
+                show: true,
+                type: 'slider',
+                top: '90%',
+                start: 50,
+                end: 100
+            }
+        ],
+        series: [
+            {
+                name: '日K',
+                type: 'candlestick',
+                data: data0.values,
+                itemStyle: {
+                    color: upColor,
+                    color0: downColor,
+                    borderColor: upBorderColor,
+                    borderColor0: downBorderColor
+                },
+                markPoint: {
+                    label: {
+                        normal: {
+                            formatter: function (param) {
+                                return param != null ? Math.round(param.value) : '';
+                            }
+                        }
+                    },
+                    data: [
+                        {
+                            name: 'XX标点',
+                            coord: ['2013/5/31', 2300],
+                            value: 2300,
+                            itemStyle: {
+                                color: 'rgb(41,60,85)'
+                            }
+                        },
+                        {
+                            name: 'highest value',
+                            type: 'max',
+                            valueDim: 'highest'
+                        },
+                        {
+                            name: 'lowest value',
+                            type: 'min',
+                            valueDim: 'lowest'
+                        },
+                        {
+                            name: 'average value on close',
+                            type: 'average',
+                            valueDim: 'close'
+                        }
+                    ],
+                    tooltip: {
+                        formatter: function (param) {
+                            return param.name + '<br>' + (param.data.coord || '');
+                        }
+                    }
+                },
+                markLine: {
+                    symbol: ['none', 'none'],
+                    data: [
+                        [
+                            {
+                                name: 'from lowest to highest',
+                                type: 'min',
+                                valueDim: 'lowest',
+                                symbol: 'circle',
+                                symbolSize: 10,
+                                label: {
+                                    show: false
+                                },
+                                emphasis: {
+                                    label: {
+                                        show: false
+                                    }
+                                }
+                            },
+                            {
+                                type: 'max',
+                                valueDim: 'highest',
+                                symbol: 'circle',
+                                symbolSize: 10,
+                                label: {
+                                    show: false
+                                },
+                                emphasis: {
+                                    label: {
+                                        show: false
+                                    }
+                                }
+                            }
+                        ],
+                        {
+                            name: 'min line on close',
+                            type: 'min',
+                            valueDim: 'close'
+                        },
+                        {
+                            name: 'max line on close',
+                            type: 'max',
+                            valueDim: 'close'
+                        }
+                    ]
+                }
+            },
+            {
+                name: 'MA5',
+                type: 'line',
+                data: calculateMA(5),
+                smooth: true,
+                lineStyle: {
+                    opacity: 0.5
+                }
+            },
+            {
+                name: 'MA10',
+                type: 'line',
+                data: calculateMA(10),
+                smooth: true,
+                lineStyle: {
+                    opacity: 0.5
+                }
+            },
+            {
+                name: 'MA20',
+                type: 'line',
+                data: calculateMA(20),
+                smooth: true,
+                lineStyle: {
+                    opacity: 0.5
+                }
+            },
+            {
+                name: 'MA30',
+                type: 'line',
+                data: calculateMA(30),
+                smooth: true,
+                lineStyle: {
+                    opacity: 0.5
+                }
+            },
+
+        ]
+    };
+
+
+// 使用刚指定的配置项和数据显示图表。
+myChart.setOption(option);
+
+    </script>
+
   </body>
 </html>
