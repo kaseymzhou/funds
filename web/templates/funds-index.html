@@ -24,6 +24,9 @@
     <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/perfect-scrollbar.min.css">
     <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/prism.min.css">
     <link rel="stylesheet" type="text/css" href="app-assets/css/app.css">
+    <script src="app-assets/js/echarts.js"></script>
+    <script src="app-assets/js/echarts-gl.js"></script>
+    <script src="../static/js/jquery-1.11.3.js"></script>
   </head>
 
   <body data-col="2-columns" class=" 2-columns ">
@@ -58,17 +61,17 @@
                   <span data-i18n="" class="menu-title">按投资类别</span>
                 </a>
                 <ul class="menu-content">
-                  <li><a href="funds-catalog.html?cid=1" class="menu-item">债券型</a>
+                  <!-- <li><a href="funds-catalog.html?cid=1&sid=1" class="menu-item">债券型</a>
+                  </li> -->
+                  <li><a href="funds-catalog.html?cid=1&sid=2" class="menu-item">债券指数</a>
                   </li>
-                  <li><a href="funds-catalog.html?cid=2" class="menu-item">债券指数</a>
+                  <li><a href="funds-catalog.html?cid=1&sid=3" class="menu-item">股票型</a>
                   </li>
-                  <li><a href="funds-catalog.html?cid=3" class="menu-item">股票型</a>
+                  <li><a href="funds-catalog.html?cid=1&sid=4" class="menu-item">QDII</a>
                   </li>
-                  <li><a href="funds-catalog.html?cid=4" class="menu-item">QDII</a>
+                  <li><a href="funds-catalog.html?cid=1&sid=5" class="menu-item">混合FOF</a>
                   </li>
-                  <li><a href="funds-catalog.html?cid=5" class="menu-item">混合FOF</a>
-                  </li>
-                  <li><a href="funds-catalog.html?cid=6" class="menu-item">混合型</a>
+                  <li><a href="funds-catalog.html?cid=1&sid=6" class="menu-item">混合型</a>
                   </li>
                 </ul>
               </li>
@@ -78,15 +81,15 @@
                   <span data-i18n="" class="menu-title">按风险程度</span>
                 </a>
                 <ul class="menu-content">
-                  <li><a href="funds-catalog.html?cid=7" class="menu-item">高风险</a>
+                  <li><a href="funds-catalog.html?cid=2&sid=1" class="menu-item">高风险</a>
                   </li>
-                  <li><a href="funds-catalog.html?cid=8" class="menu-item">中高风险</a>
+                  <li><a href="funds-catalog.html?cid=2&sid=2" class="menu-item">中高风险</a>
                   </li>
-                  <li><a href="funds-catalog.html?cid=9" class="menu-item">中风险</a>
+                  <li><a href="funds-catalog.html?cid=2&sid=3" class="menu-item">中风险</a>
                   </li>
-                  <li><a href="funds-catalog.html?cid=10" class="menu-item">中低风险</a>
+                  <li><a href="funds-catalog.html?cid=2&sid=4" class="menu-item">中低风险</a>
                   </li>
-                  <li><a href="funds-catalog.html?cid=11" class="menu-item">低风险</a>
+                  <li><a href="funds-catalog.html?cid=2&sid=5" class="menu-item">低风险</a>
                   </li>
                 </ul>
               </li>
@@ -96,25 +99,25 @@
                   <span data-i18n="" class="menu-title">按基金管理人</span>
                 </a>
                 <ul class="menu-content">
-                  <li><a href="funds-catalog.html?cid=12" class="menu-item">博时基金</a>
+                  <li><a href="funds-catalog.html?cid=3&sid=1" class="menu-item">博时基金</a>
                   </li>
-                  <li><a href="funds-catalog.html?cid=13" class="menu-item">广发基金</a>
+                  <li><a href="funds-catalog.html?cid=3&sid=2" class="menu-item">广发基金</a>
                   </li>
-                  <li><a href="funds-catalog.html?cid=14" class="menu-item">中信保诚基金</a>
+                  <li><a href="funds-catalog.html?cid=3&sid=3" class="menu-item">中信保诚基金</a>
                   </li>
-                  <li><a href="funds-catalog.html?cid=15" class="menu-item">南方基金</a>
+                  <li><a href="funds-catalog.html?cid=3&sid=4" class="menu-item">南方基金</a>
                   </li>
-                  <li><a href="funds-catalog.html?cid=16" class="menu-item">华夏基金</a>
+                  <li><a href="funds-catalog.html?cid=3&sid=5" class="menu-item">华夏基金</a>
                   </li>
-                  <li><a href="funds-catalog.html?cid=17" class="menu-item">工银瑞信基金</a>
+                  <li><a href="funds-catalog.html?cid=3&sid=6" class="menu-item">工银瑞信基金</a>
                   </li>
-                  <li><a href="funds-catalog.html?cid=18" class="menu-item">招商基金</a>
+                  <li><a href="funds-catalog.html?cid=3&sid=7" class="menu-item">招商基金</a>
                   </li>
-                  <li><a href="funds-catalog.html?cid=19" class="menu-item">万家基金</a>
+                  <li><a href="funds-catalog.html?cid=3&sid=8" class="menu-item">万家基金</a>
                   </li>
-                  <li><a href="funds-catalog.html?cid=20" class="menu-item">嘉实基金</a>
+                  <li><a href="funds-catalog.html?cid=3&sid=9" class="menu-item">嘉实基金</a>
                   </li>
-                  <li><a href="funds-catalog.html?cid=21" class="menu-item">易方达基金</a>
+                  <li><a href="funds-catalog.html?cid=3&sid=10" class="menu-item">易方达基金</a>
                   </li>
                 </ul>
               </li>
@@ -202,68 +205,33 @@
             <div class="container-fluid"><!-- Line Chart Starts -->
               <div class="row">
                   <div class="col-sm-12">
-                      <h2 class="content-header">总体指标</h2>
-                      <p class="content-sub-header">总体指标相关介绍</p>
+                      <h2 class="content-header">FFUNDS LET'S GO</h2>
+                      <p class="content-sub-header">The Overview</p>
                   </div>
               </div>
 
               <!-- Line Chart -->
               <div class="row">
+                  
                   <div class="col-sm-12">
                       <div class="card">
-                          <div class="card-header">
+                          <div class="card-header" style='margin-top:0px'>
                               <div class="card-title-wrap bar-success">
-                                  <h4 class="card-title">Line Chart</h4>
+                                  <h4 class="card-title">部分基金公司基金产品类别数量一览</h4>
                               </div>
                           </div>
                           <div class="card-body">
-                              <div class="card-block chartjs">
-                                  <canvas id="line-chart" height="400"></canvas>
-                              </div>
+                            <div id='mainc' style='width: 1000px;height:460px'></div>
                           </div>
                       </div>
                   </div>
               </div>
 
-              <!-- Area Chart -->
-              <div class="row">
-                  <div class="col-sm-12">
-                      <div class="card">
-                          <div class="card-header">
-                              <div class="card-title-wrap bar-warning">
-                                  <h4 class="card-title">Area Chart</h4>
-                              </div>
-                          </div>
-                          <div class="card-body">
-                              <div class="card-block chartjs">
-                                  <canvas id="area-chart" height="400"></canvas>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-
-              <!-- Bar Chart -->
-              <div class="row">
-                  <div class="col-sm-12">
-                      <div class="card">
-                          <div class="card-header">
-                              <div class="card-title-wrap bar-primary">
-                                  <h4 class="card-title">Bar Chart</h4>
-                              </div>
-                          </div>
-                          <div class="card-body">
-                              <div class="card-block chartjs">
-                                  <canvas id="column-chart" height="400"></canvas>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
+              
 
             </div>
           </div>
-        </div>
+        </div> -->
 
         <!-- 页脚 -->
         <footer class="footer footer-static footer-light">
@@ -297,7 +265,103 @@
     <script src="app-assets/js/notification-sidebar.js"></script>
     <!-- END CONVEX JS-->
     <!-- BEGIN PAGE LEVEL JS-->
-    <script src="app-assets/js/chartjs.js"></script>
+    <!-- <script src="app-assets/js/chartjs.js"></script> -->
     <!-- END PAGE LEVEL JS-->
-  </body>
+
+  
+
+
+  <script type="text/javascript">
+  $.ajax({
+              url:'http://127.0.0.1:5000/funds/index',
+              type:'GET',
+              dataType:'jsonp',
+              success:function(d){
+                    var score_list = d.score_list
+                    var myChart = echarts.init(document.getElementById('mainc'));
+                    // 指定图表的配置项和数据
+                    var upColor = '#ec0000';
+                    var upBorderColor = '#8A0000';
+                    var downColor = '#00da3c';
+                    var downBorderColor = '#008F28';
+                    
+                  var hours = ['广发基金', '博时基金', '南方基金','华夏基金', '工银瑞信', '招商基金'];
+                  var days = ['债券指数', 'QDII', '股票型', '混合FOF', '混合型'];
+
+                  var data = score_list;
+                  option = {
+                      tooltip: {},
+                      visualMap: {
+                          max: 20,
+                          inRange: {
+                              color: ['#313695', '#4575b4', '#74add1', '#abd9e9', '#e0f3f8', '#ffffbf', '#fee090', '#fdae61', '#f46d43', '#d73027', '#a50026']
+                          }
+                      },
+                      xAxis3D: {
+                          type: 'category',
+                          data: hours
+                      },
+                      yAxis3D: {
+                          type: 'category',
+                          data: days
+                      },
+                      zAxis3D: {
+                          type: 'value'
+                      },
+                      grid3D: {
+                          boxWidth: 200,
+                          boxDepth: 80,
+                          light: {
+                              main: {
+                                  intensity: 1.2
+                              },
+                              ambient: {
+                                  intensity: 0.3
+                              }
+                          }
+                      },
+                      series: [{
+                          type: 'bar3D',
+                          data: data.map(function (item) {
+                              return {
+                                  value: [item[1], item[0], item[2]]
+                              }
+                          }),
+                          shading: 'color',
+
+                          label: {
+                              show: false,
+                              textStyle: {
+                                  fontSize: 16,
+                                  borderWidth: 1
+                              }
+                          },
+                          
+                          itemStyle: {
+                              opacity: 0.4
+                          },
+
+                          emphasis: {
+                              label: {
+                                  textStyle: {
+                                      fontSize: 20,
+                                      color: '#900'
+                                  }
+                              },
+                              itemStyle: {
+                                  color: '#900'
+                              }
+                          }
+                      }]
+                  }
+                    myChart.setOption(option);
+
+                  },
+              error:function (e) {
+                console.log("Error");
+                console.log(e);
+              }
+            })
+  </script>
+</body>
 </html>

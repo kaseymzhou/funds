@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="../static/css/DOCTYPE"> -->
+    <script src="app-assets/js/echarts.js"></script>
+    <script src="../static/js/jquery-1.11.3.js"></script>
+</head>
+<body>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main" style="width: 700px;height:500px;"></div>
+
+
+<script type="text/javascript">
+   
+
+    $.ajax({
+        url:'http://127.0.0.1:5000/funds/trend',
+        type:'GET',
+        dataType:'jsonp',
+        // jsonp:'callback',
+        // async:false,
+        // jsonpCallback:"success_jsonpCallback",
+        success:function(d){
+            console.log(1)
+            // d = JSON.parse(d)
+             // 基于准备好的dom，初始化echarts实例
+            var myChart = echarts.init(document.getElementById('main'));
+            // 指定图表的配置项和数据
+            var upColor = '#ec0000';
+            var upBorderColor = '#8A0000';
+            var downColor = '#00da3c';
+            var downBorderColor = '#008F28';
+            option = {
+                xAxis: {
+                    type: 'category',
+                    data: d.date
+                },
+                yAxis: {
+                    type: 'value'
+                },
+                tooltip: {
+        trigger: 'axis'
+    },
+                series: [{
+                    name: '单位净值',
+                    data: d.unit_nav,
+                    type: 'line',
+                    smooth: true
+                },
+                {
+                    name: '累计净值',
+                    data: d.accum_nav,
+                    type: 'line',
+                    smooth: true
+                },
+                {
+                    name: '复权单位净值',
+                    data: d.adj_nav,
+                    type: 'line',
+                    smooth: true
+                }],
+                legend: {data: ['单位净值', '累计净值', '复权单位净值']},
+                dataZoom: [
+                        {
+                            type: 'inside',
+                            start: 50,
+                            end: 100
+                        },
+                        {
+                            show: true,
+                            type: 'slider',
+                            top: '90%',
+                            start: 50,
+                            end: 100
+                        }
+                    ],
+                };
+            // 使用刚指定的配置项和数据显示图表。
+            myChart.setOption(option);             
+        },
+        error: function (e) {
+                            console.log("Error");
+                            console.log(e);
+        }
+    })
+
+
+
+
+</script>
+</body>
+</html>

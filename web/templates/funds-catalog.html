@@ -58,17 +58,17 @@
                 <span data-i18n="" class="menu-title">按投资类别</span>
               </a>
               <ul class="menu-content">
-                <li><a href="funds-catalog.html?cid=1" class="menu-item">债券型</a>
+                <!-- <li><a href="funds-catalog.html?cid=1&sid=1" class="menu-item">债券型</a>
+                </li> -->
+                <li><a href="funds-catalog.html?cid=1&sid=2" class="menu-item">债券指数</a>
                 </li>
-                <li><a href="funds-catalog.html?cid=2" class="menu-item">债券指数</a>
+                <li><a href="funds-catalog.html?cid=1&sid=3" class="menu-item">股票型</a>
                 </li>
-                <li><a href="funds-catalog.html?cid=3" class="menu-item">股票型</a>
+                <li><a href="funds-catalog.html?cid=1&sid=4" class="menu-item">QDII</a>
                 </li>
-                <li><a href="funds-catalog.html?cid=4" class="menu-item">QDII</a>
+                <li><a href="funds-catalog.html?cid=1&sid=5" class="menu-item">混合FOF</a>
                 </li>
-                <li><a href="funds-catalog.html?cid=5" class="menu-item">混合FOF</a>
-                </li>
-                <li><a href="funds-catalog.html?cid=6" class="menu-item">混合型</a>
+                <li><a href="funds-catalog.html?cid=1&sid=6" class="menu-item">混合型</a>
                 </li>
               </ul>
             </li>
@@ -78,15 +78,15 @@
                 <span data-i18n="" class="menu-title">按风险程度</span>
               </a>
               <ul class="menu-content">
-                <li><a href="funds-catalog.html?cid=7" class="menu-item">高风险</a>
+                <li><a href="funds-catalog.html?cid=2&sid=1" class="menu-item">高风险</a>
                 </li>
-                <li><a href="funds-catalog.html?cid=8" class="menu-item">中高风险</a>
+                <li><a href="funds-catalog.html?cid=2&sid=2" class="menu-item">中高风险</a>
                 </li>
-                <li><a href="funds-catalog.html?cid=9" class="menu-item">中风险</a>
+                <li><a href="funds-catalog.html?cid=2&sid=3" class="menu-item">中风险</a>
                 </li>
-                <li><a href="funds-catalog.html?cid=10" class="menu-item">中低风险</a>
+                <li><a href="funds-catalog.html?cid=2&sid=4" class="menu-item">中低风险</a>
                 </li>
-                <li><a href="funds-catalog.html?cid=11" class="menu-item">低风险</a>
+                <li><a href="funds-catalog.html?cid=2&sid=5" class="menu-item">低风险</a>
                 </li>
               </ul>
             </li>
@@ -96,25 +96,25 @@
                 <span data-i18n="" class="menu-title">按基金管理人</span>
               </a>
               <ul class="menu-content">
-                <li><a href="funds-catalog.html?cid=12" class="menu-item">博时基金</a>
+                <li><a href="funds-catalog.html?cid=3&sid=1" class="menu-item">博时基金</a>
                 </li>
-                <li><a href="funds-catalog.html?cid=13" class="menu-item">广发基金</a>
+                <li><a href="funds-catalog.html?cid=3&sid=2" class="menu-item">广发基金</a>
                 </li>
-                <li><a href="funds-catalog.html?cid=14" class="menu-item">中信保诚基金</a>
+                <li><a href="funds-catalog.html?cid=3&sid=3" class="menu-item">中信保诚基金</a>
                 </li>
-                <li><a href="funds-catalog.html?cid=15" class="menu-item">南方基金</a>
+                <li><a href="funds-catalog.html?cid=3&sid=4" class="menu-item">南方基金</a>
                 </li>
-                <li><a href="funds-catalog.html?cid=16" class="menu-item">华夏基金</a>
+                <li><a href="funds-catalog.html?cid=3&sid=5" class="menu-item">华夏基金</a>
                 </li>
-                <li><a href="funds-catalog.html?cid=17" class="menu-item">工银瑞信基金</a>
+                <li><a href="funds-catalog.html?cid=3&sid=6" class="menu-item">工银瑞信基金</a>
                 </li>
-                <li><a href="funds-catalog.html?cid=18" class="menu-item">招商基金</a>
+                <li><a href="funds-catalog.html?cid=3&sid=7" class="menu-item">招商基金</a>
                 </li>
-                <li><a href="funds-catalog.html?cid=19" class="menu-item">万家基金</a>
+                <li><a href="funds-catalog.html?cid=3&sid=8" class="menu-item">万家基金</a>
                 </li>
-                <li><a href="funds-catalog.html?cid=20" class="menu-item">嘉实基金</a>
+                <li><a href="funds-catalog.html?cid=3&sid=9" class="menu-item">嘉实基金</a>
                 </li>
-                <li><a href="funds-catalog.html?cid=21" class="menu-item">易方达基金</a>
+                <li><a href="funds-catalog.html?cid=3&sid=10" class="menu-item">易方达基金</a>
                 </li>
               </ul>
             </li>
@@ -204,42 +204,35 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    <div class="card-title-wrap bar-success">
-                        <h4 class="card-title">FFunds / XX类型</h4>
+                    <div class="card-title-wrap bar-success" id='subclass_name'>
+                        
                     </div>
                 </div>
                 <div class="card-body collapse show">
                     <div class="card-block card-dashboard">
-                        <p class="card-text">该类别下共查询到？条信息</p>
+                        <!-- <p class="card-text">该类别下共查询到？条信息</p> -->
                         <table class="table table-striped table-bordered dom-jQuery-events">
                             <thead>
                                 <tr>
                                     <th>基金名字</th>
                                     <th>基金编号</th>
-                                    <th>单位净值</th>
-                                    <th>累计净值</th>
                                     <th>所属基金管理人</th>
-                                    <th>风险类别</th>
+                                    <th>基金经理</th>
+                                    <th>单位净值</th>
+                                    <th>近半年单位净值变化</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr>
-                                    <td><a href="funds-details.html?fid=0">Tiger Nixon</a></td>
-                                    <td>System Architect</td>
-                                    <td>Edinburgh</td>
-                                    <td>61</td>
-                                    <td>2011/04/25</td>
-                                    <td>$320,800</td>
-                                </tr>
+                            <tbody id='fund_content'>
+                                
                             </tbody>
                             <tfoot>
                                 <tr>
                                     <th>基金名字</th>
                                     <th>基金编号</th>
-                                    <th>单位净值</th>
-                                    <th>累计净值</th>
                                     <th>所属基金管理人</th>
-                                    <th>风险类别</th>
+                                    <th>基金经理</th>
+                                    <th>单位净值</th>
+                                    <th>近半年单位净值变化</th>
                                 </tr>
                             </tfoot>
                         </table>
@@ -296,5 +289,50 @@
     <!-- BEGIN PAGE LEVEL JS-->
     <script src="app-assets/js/data-tables/datatable-advanced.js"></script>
     <!-- END PAGE LEVEL JS-->
+
+    <script>
+    (function ($) {
+          $.getUrlParam = function (name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return r;
+            return null;
+          }
+
+          var cid = $.getUrlParam('cid')[2];
+          var sid = $.getUrlParam('sid')[2];
+
+            $.ajax({
+              url:'http://127.0.0.1:5000/funds/catalog_view/'+cid+'/'+sid+'/1',
+              type:'GET',
+              dataType:'jsonp',
+              success:function(d){
+                var data = d.content;
+                html = '';
+                for (i=0;i<data.length;i++){
+                  html+=   '<tr>'
+                  html+=   '<td><a href="funds-details.html?fid='+data[i].fid+'">'+data[i].name+'</a></td>'
+                  html+=   '<td>'+data[i].fid+'</td>'
+                  html+=   '<td>'+data[i].management+'</td>'
+                  html+=   '<td>'+data[i].manager+'</td>'
+                  html+=   '<td>'+data[i].unit_nv+'</td>'
+                  html+=   '<td>'+data[i].cnv_change_6m+'</td>'
+                  html+=   '</tr>'
+                };
+                $('#fund_content').html(html);
+                shtml = '<h4 class="card-title" >FFunds / '+d.sname+'</h4>';
+                $('#subclass_name').html(shtml)
+
+              },
+              error:function (e) {
+                console.log("Error");
+                console.log(e);
+              }
+            })
+
+    })(jQuery);
+    
+
+  </script>
   </body>
 </html>
