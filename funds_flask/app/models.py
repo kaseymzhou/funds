@@ -4,7 +4,6 @@ from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
 
-
 class Catalog(db.Model):
     __tablename__ = 'catalog'
     id  = db.Column(db.Integer,primary_key=True,autoincrement=True)

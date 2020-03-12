@@ -26,8 +26,8 @@ except Exception as e:
 
 try:
     sql2 = "INSERT INTO `subclass_investment` VALUES (%s, %s, %s)"
-    cursor.executemany(sql2,[(1,1,'债券'),(2,1,'债券指数'),(3,1,'股票型'),
-                            (4,1,'QDII'),(5,1,'混合FOF'),(6,1,'混合型'),(7,1,'其他')])
+    cursor.executemany(sql2,[(1,1,'债券型'),(2,1,'债券指数'),(3,1,'股票型'),
+                            (4,1,'QDII'),(5,1,'混合-FOF'),(6,1,'混合型'),(7,1,'其他')])
     db.commit()
 except Exception as e:
     db.rollback()
@@ -76,10 +76,10 @@ except Exception as e:
 
 
 risk_dict= [('高风险',1),('中高风险',2),('中风险',3),('中低风险',4),('低风险',5)]
-class_dict = [('债券',1),('债券指数',2),('股票型',3),('QDII',4),('混合FOF',5),('混合型',6)]
+class_dict = [('债券型',1),('债券指数',2),('股票型',3),('QDII',4),('混合FOF',5),('混合型',6)]
 management_dict = [('博时基金',1),('广发基金',2),('中信保诚公司',3),('南方基金',4),('华夏基金',5),('工银瑞信基金',6),('招商基金',7),('万家基金',8),('嘉实基金',9),('易方达基金',10)]
 
-df_recommend = pd.DataFrame(pd.read_csv('../similarities_train/funds_sorted.csv'))
+df_recommend = pd.DataFrame(pd.read_csv('../../similarities_train/funds_sorted.csv'))
 funds_list = []
 for index,row in df_recommend.iterrows():
     for item1 in risk_dict:
